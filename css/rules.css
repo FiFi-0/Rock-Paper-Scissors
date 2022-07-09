@@ -1,0 +1,15 @@
+.rules {
+  position: relative;
+}
+
+.rules__button {
+  font-size: 20px;
+  padding: 10px 20px;
+  color: white;
+  background: none;
+  border: solid 1px rgb(179, 179, 179);
+  border-radius: 7px;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}/*# sourceMappingURL=rules.css.map */

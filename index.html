@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/rules.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
+
 <body>
+  <div class="container">
+  <header class="header">
+    <img src="/images/logo.svg" alt="rock paper scissors" class="header__logo">
 
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Filip Ochał</a>.
+    <div class="score">
+      <h1 class="score_header">SCORE</h1>
+      <p class="score_value">0</p>
+    </div>
+  </header>
+  <main class="hero__container">
+    <div class="hero">
+      <button class="paper circle">
+        <div class="circle__inner">
+          <img src="/images/icon-paper.svg" alt="paper" class="circle__icon">
+        </div>
+      </button>
+      <button class="scissors circle">
+        <div class="circle__inner">
+          <img src="/images/icon-scissors.svg" alt="scissors" class="circle__icon">
+        </div>
+      </button>
+      <button class="rock circle">
+        <div class="circle__inner">
+          <img src="/images/icon-rock.svg" alt="rock" class="circle__icon">
+        </div>
+      </button>
+      <div class="hero__triangle"></div>
+    </div>
+  </main>
+  <div class="rules">
+    <button class="rules__button">RULES</button>
   </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Filip Ochał</a>.
+  </footer>
+</div>
 </body>
+
 </html>
