@@ -2,18 +2,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
 }
 
 .hero {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 50px;
-    grid-column-gap: 70px;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
+    width: 75vw;
+}
+
+.hero__options-to-pick {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__options-to-pick__1st-row,
+.hero__options-to-pick__2nd-row {
+    display: flex;
+}
+
+.hero__options-to-pick__1st-row>.circle {
+    margin: 0 30px 30px;
 }
 
 .hero__triangle {
@@ -26,42 +38,45 @@
     top: 12vh;
 }
 
-.circle {
-    border-radius: 100%;
-    width: 30vh;
-    height: 30vh;
+.hero__house-pick__shadow {
+    border-radius: 50%;
+    width: 33vh;
+    height: 33vh;
+    background-color: rgba(85, 85, 85, 0.116);
+    display: none;
+    margin: 4.5vh;
+}
+
+.hero__house-pick,
+.hero__user-pick {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    z-index: 1;
+    flex-direction: column;
+    margin: 0 5vh;
+    position: relative;
 }
 
-.paper {
-    background-image: linear-gradient(rgb(72, 101, 244), rgb(86, 113, 245));
-    grid-area: 1 / 1 / 2 / 2;
+.hero__user-pick__header,
+.hero__house-pick__header {
+    display: none;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 5vh;
 }
 
-.scissors {
-    background-image: linear-gradient(rgb(236, 158, 14), rgb(236, 169, 34));
-    grid-area: 1 / 2 / 2 / 3;
+.hero__house-picked-option.circle {
+    display: none;
 }
 
-.rock {
-    background-image: linear-gradient(rgb(220, 46, 78), rgb(221, 64, 93));
-    grid-area: 2 / 1 / 3 / 3;
-}
-
-.circle__inner {
-    border-radius: 100%;
-    width: 23vh;
-    height: 23vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle__icon {
-    width: 11vh;
+.hero__user-pick__glow,
+.hero__house-pick__glow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42vh;
+    height: 42vh;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10vh rgba(255, 255, 255, 0.06), 0px 0px 0px 20vh rgba(255, 255, 255, 0.03), 0px 0px 0px 30vh rgba(255, 255, 255, 0.01);
+    display: none;
 }

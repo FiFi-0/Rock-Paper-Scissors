@@ -1,0 +1,72 @@
+.circle {
+    border-radius: 50%;
+    width: 30vh;
+    height: 30vh;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: inset 0px -25px 0px -9px rgba(66, 68, 90, 0.288);
+    transition: all 1s;
+}
+
+
+.circle__inner {
+    border-radius: 100%;
+    width: 23vh;
+    height: 23vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    box-shadow: inset 0px 20px 0px -9px rgba(66, 68, 90, 0.288);
+}
+
+.circle__icon {
+    width: 11vh;
+    transition: all 1s;
+}
+
+
+.picked {
+    width: 42vh;
+    height: 42vh;
+    margin: 0 !important;
+}
+
+.picked>.circle__inner {
+    width: 33vh;
+    height: 33vh;
+}
+
+.picked>.circle__inner>.circle__icon {
+    width: 18vh;
+}
+
+
+.paper {
+    background-image: linear-gradient(rgb(72, 101, 244), rgb(86, 113, 245));
+}
+
+.paper>.circle__inner>.circle__icon {
+    content: url("/images/icon-paper.svg");
+}
+
+.scissors {
+    background-image: linear-gradient(rgb(236, 158, 14), rgb(236, 169, 34));
+}
+
+.scissors>.circle__inner>.circle__icon {
+    content: url("/images/icon-scissors.svg");
+}
+
+.rock {
+    background-image: linear-gradient(rgb(220, 46, 78), rgb(221, 64, 93));
+}
+
+.rock>.circle__inner>.circle__icon {
+    content: url("/images/icon-rock.svg");
+}

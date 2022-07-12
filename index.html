@@ -13,47 +13,79 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/rules.css">
   <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/circles.css">
+  <link rel="stylesheet" href="/css/result.css">
+  <script type="module" src="JS/script.js"></script>
 </head>
 
 <body>
   <div class="container">
-  <header class="header">
-    <img src="/images/logo.svg" alt="rock paper scissors" class="header__logo">
+    <header class="header">
+      <img src="/images/logo.svg" alt="rock paper scissors" class="header__logo">
 
-    <div class="score">
-      <h1 class="score_header">SCORE</h1>
-      <p class="score_value">0</p>
+      <div class="score">
+        <h1 class="score_header">SCORE</h1>
+        <p class="score_value">0</p>
+      </div>
+    </header>
+    <main class="hero__container">
+      <div class="hero">
+        <div class="hero__header">
+        </div>
+        <div class="hero__user-pick">
+          <h1 class="hero__user-pick__header">YOU PICKED</h1>
+          <div class="hero__options-to-pick">
+            <div class="hero__options-to-pick__1st-row">
+              <div class="paper circle">
+                <div class="circle__inner">
+                  <div class="hero__user-pick__glow"></div>
+                  <!--src=data:, is a way for valid empty img-->
+                  <img alt="paper" src="data:," class="circle__icon">
+                </div>
+              </div>
+              <div class="scissors circle">
+                <div class="circle__inner">
+                  <div class="hero__user-pick__glow"></div>
+                  <img alt="scissors" src="data:," class="circle__icon">
+                </div>
+              </div>
+            </div>
+            <div class="hero__options-to-pick__2nd-row">
+              <div class="rock circle">
+                <div class="circle__inner">
+                  <div class="hero__user-pick__glow"></div>
+                  <img alt="rock" src="data:," class="circle__icon">
+                </div>
+              </div>
+            </div>
+            <div class="hero__triangle"></div>
+          </div>
+        </div>
+        <div class="result">
+          <h1 class="result__header">YOU WIN</h1>
+          <button class="result__play-again">PLAY AGAIN</button>
+        </div>
+        <div class="hero__house-pick">
+          <h1 class="hero__house-pick__header">THE HOUSE PICKED</h1>
+          <div class="hero__house-pick__shadow"></div>
+          <div class="hero__house-picked-option circle picked">
+            <div class="circle__inner">
+              <div class="hero__house-pick__glow"></div>
+              <img alt="house pick" src="data:," class="circle__icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="rules">
+      <button class="rules__button">RULES</button>
     </div>
-  </header>
-  <main class="hero__container">
-    <div class="hero">
-      <button class="paper circle">
-        <div class="circle__inner">
-          <img src="/images/icon-paper.svg" alt="paper" class="circle__icon">
-        </div>
-      </button>
-      <button class="scissors circle">
-        <div class="circle__inner">
-          <img src="/images/icon-scissors.svg" alt="scissors" class="circle__icon">
-        </div>
-      </button>
-      <button class="rock circle">
-        <div class="circle__inner">
-          <img src="/images/icon-rock.svg" alt="rock" class="circle__icon">
-        </div>
-      </button>
-      <div class="hero__triangle"></div>
-    </div>
-  </main>
-  <div class="rules">
-    <button class="rules__button">RULES</button>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Filip Ochał</a>.
+    </footer>
   </div>
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Filip Ochał</a>.
-  </footer>
-</div>
 </body>
 
 </html>
