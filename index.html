@@ -24,8 +24,8 @@
       <img src="/images/logo.svg" alt="rock paper scissors" class="header__logo">
 
       <div class="score">
-        <h1 class="score_header">SCORE</h1>
-        <p class="score_value">0</p>
+        <h1 class="score__header">SCORE</h1>
+        <p class="score__value">0</p>
       </div>
     </header>
     <main class="hero__container">
@@ -35,25 +35,23 @@
         <div class="hero__user-pick">
           <h1 class="hero__user-pick__header">YOU PICKED</h1>
           <div class="hero__options-to-pick">
-            <div class="hero__options-to-pick__1st-row">
-              <div class="paper circle">
+            <div class="hero__user-pick__glow"></div>
+            <div class="hero__options-to-pick--1st-row">
+              <div class="paper circle" data-option="paper">
                 <div class="circle__inner">
-                  <div class="hero__user-pick__glow"></div>
                   <!--src=data:, is a way for valid empty img-->
                   <img alt="paper" src="data:," class="circle__icon">
                 </div>
               </div>
-              <div class="scissors circle">
+              <div class="scissors circle" data-option="scissors">
                 <div class="circle__inner">
-                  <div class="hero__user-pick__glow"></div>
                   <img alt="scissors" src="data:," class="circle__icon">
                 </div>
               </div>
             </div>
-            <div class="hero__options-to-pick__2nd-row">
-              <div class="rock circle">
+            <div class="hero__options-to-pick--2nd-row">
+              <div class="rock circle" data-option="rock">
                 <div class="circle__inner">
-                  <div class="hero__user-pick__glow"></div>
                   <img alt="rock" src="data:," class="circle__icon">
                 </div>
               </div>

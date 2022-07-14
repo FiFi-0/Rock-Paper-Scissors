@@ -9,7 +9,6 @@
     cursor: pointer;
     z-index: 1;
     box-shadow: inset 0px -25px 0px -9px rgba(66, 68, 90, 0.288);
-    transition: all 1s;
 }
 
 
@@ -21,13 +20,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 1s;
     box-shadow: inset 0px 20px 0px -9px rgba(66, 68, 90, 0.288);
 }
 
 .circle__icon {
     width: 11vh;
-    transition: all 1s;
 }
 
 

@@ -10,6 +10,9 @@
   --dark-text: rgb(59, 67, 99);
   --score-text: rgb(42, 70, 192);
   --outline: rgb(96, 110, 133);
+  --play-again--win: rgb(31, 31, 187);
+  --play-again--draw: rgb(115, 121, 131);
+  --play-again--lose: red;
 }
 
 body {
