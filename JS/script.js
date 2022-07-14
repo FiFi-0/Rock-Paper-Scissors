@@ -15,6 +15,9 @@ const userGlow = document.querySelector('.hero__user-pick__glow')
 const houseGlow = document.querySelector('.hero__house-pick__glow')
 const scoreValue = document.querySelector('.score__value')
 const btnPlayAgain = document.querySelector('.result__play-again')
+const rules = document.querySelector('.rules')
+const btnOpenRules = document.querySelector('.rules__button')
+const btnCloseRules = document.querySelector('.rules__close-btn')
 
 const choices = ['rock', 'paper', 'scissors'];
 var score = 0;
@@ -86,7 +89,7 @@ const displayBattle = function (clickedByUser) {
     housePickedOption.classList.add(houseChoice);
 
     setDisplayStyle([rock, scissors, paper, triangle], 'none');
-    setDisplayStyle([userPickHeader, housePickHeader, housePickShadow, clickedByUser], 'flex');
+    setDisplayStyle([userPickHeader, housePickHeader, housePickShadow, clickedByUser, housePick], 'flex');
 
     setTimeout(renderHousePick, 500);
     setTimeout(renderResult, 700, winnerGlow, whoWonResult);
@@ -98,7 +101,7 @@ rock.addEventListener('click', function () { displayBattle(rock) });
 scissors.addEventListener('click', function () { displayBattle(scissors) });
 
 const playAgain = function () {
-    setDisplayStyle([userPickHeader, housePickHeader, housePickShadow, housePickedOption, result, userGlow, houseGlow], 'none');
+    setDisplayStyle([userPickHeader, housePickHeader, housePickShadow, housePickedOption, result, userGlow, houseGlow, housePick], 'none');
     setDisplayStyle([rock, scissors, paper, triangle], 'flex');
 
     [paper, rock, scissors].forEach(el => el.classList.remove('picked'))
@@ -106,3 +109,14 @@ const playAgain = function () {
 }
 
 btnPlayAgain.addEventListener('click', playAgain);
+
+function openRules() {
+    setDisplayStyle([rules], 'block');
+};
+
+function closeRules() {
+    setDisplayStyle([rules], 'none');
+};
+
+btnOpenRules.addEventListener('click', openRules);
+btnCloseRules.addEventListener('click', closeRules);
