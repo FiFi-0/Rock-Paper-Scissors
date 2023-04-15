@@ -95,7 +95,6 @@ const displayBattle = function (clickedByUser) {
     setTimeout(renderResult, 700, winnerGlow, whoWonResult);
 }
 
-
 paper.addEventListener('click', function () { displayBattle(paper) });
 rock.addEventListener('click', function () { displayBattle(rock) });
 scissors.addEventListener('click', function () { displayBattle(scissors) });
@@ -110,13 +109,5 @@ const playAgain = function () {
 
 btnPlayAgain.addEventListener('click', playAgain);
 
-function openRules() {
-    setDisplayStyle([rules], 'block');
-};
-
-function closeRules() {
-    setDisplayStyle([rules], 'none');
-};
-
-btnOpenRules.addEventListener('click', openRules);
-btnCloseRules.addEventListener('click', closeRules);
+btnOpenRules.addEventListener('click', setDisplayStyle([rules], 'block'));
+btnCloseRules.addEventListener('click', setDisplayStyle([rules], 'none'));
